@@ -22,8 +22,30 @@ body{
 	}
 
 	input{
+		color: $secondary-blue;
+		font-weight: bold;
 		border-radius: 5px;
 		border: 1px solid $secondary-blue;
+	}
+
+	*::-webkit-input-placeholder {
+    	color: $secondary-blue;
+    	font-weight: normal;
+	}
+	*:-moz-placeholder {
+    	/* FF 4-18 */
+    	color: $secondary-blue;
+    	font-weight: normal;
+	}
+	*::-moz-placeholder {
+    	/* FF 19+ */
+    	color: $secondary-blue;
+    	font-weight: normal;
+	}
+	*:-ms-input-placeholder {
+    	/* IE 10+ */
+    	color: $secondary-blue;
+    	font-weight: normal;
 	}
 
 	input[type="submit"]{

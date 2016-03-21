@@ -14,8 +14,25 @@ body {
   #main a {
     text-decoration: none; }
   #main input {
+    color: #24324B;
+    font-weight: bold;
     border-radius: 5px;
     border: 1px solid #24324B; }
+  #main *::-webkit-input-placeholder {
+    color: #24324B;
+    font-weight: normal; }
+  #main *:-moz-placeholder {
+    /* FF 4-18 */
+    color: #24324B;
+    font-weight: normal; }
+  #main *::-moz-placeholder {
+    /* FF 19+ */
+    color: #24324B;
+    font-weight: normal; }
+  #main *:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #24324B;
+    font-weight: normal; }
   #main input[type="submit"] {
     color: white;
     background-color: #24324B; }
