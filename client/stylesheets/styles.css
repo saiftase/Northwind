@@ -1,0 +1,22 @@
+body {
+  background-color: #24324B; }
+
+#main {
+  background-color: #F05620;
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+  text-align: center; }
+  #main input {
+    border-radius: 5px;
+    border: 1px solid #24324B; }
+  #main input[type="submit"] {
+    color: white;
+    background-color: #24324B; }
+  #main h1 {
+    font-size: 3em;
+    font-family: sans-serif;
+    color: #24324B; }
+  #main ul {
+    text-align: left;
+    list-style: none; }

@@ -1,2 +1,38 @@
-.remove-item-link{
+$primary-orange: #F05620;
+$secondary-blue: #24324B;
+$accent-gray: 	#A2A5A3;
+
+body{
+	background-color: $secondary-blue;
+}
+
+#main{
+	background-color: $primary-orange;
+	margin: auto;
+	width: 30%;
+	padding: 10px;
+	text-align: center;
+
+	input{
+		border-radius: 5px;
+		border: 1px solid $secondary-blue;
+	}
+
+	input[type="submit"]{
+		color: white;
+		background-color: $secondary-blue;
+	}
+
+	h1{
+		font-size: 3em;
+		font-family: sans-serif;
+		color: $secondary-blue;
+	}
+
+	ul{
+		text-align: left;
+		list-style: none;
+	}
+
+	
 }
