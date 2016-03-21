@@ -1,0 +1,19 @@
+{
+  "name": "northwind",
+  "version": "1.0.0",
+  "description": "Prioritized list of items",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saiftase/Northwind.git"
+  },
+  "author": "Saif Tase",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saiftase/Northwind/issues"
+  },
+  "homepage": "https://github.com/saiftase/Northwind#readme"
+}
