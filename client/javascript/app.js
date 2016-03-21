@@ -39,6 +39,53 @@ app.controller("ListController", function($http, $scope){
 		})
 	}
 
+	$scope.up = function(index){
+		var id = $scope.items[index]._id;
+		var newPriority;
+
+		if(index === 0){
+			console.log("Already at the top"); return;
+		}
+
+		var higherNeighborPriority = $scope.items[index - 1].priority;
+		if(higherNeighborPriority <= 1){
+			newPriority = 1;
+		}else{
+			newPriority = higherNeighborPriority - 1;
+		}
+
+		$http({
+			method: "PUT",
+			url: "/api/items/" + id + "/priority/" + newPriority
+		})
+		.then(function(item){
+			$scope.items[index].priority = newPriority;
+			sortItems();
+		})
+	}
+
+	$scope.down = function(index){
+		var id = $scope.items[index]._id;
+		var newPriority;
+
+		var lowerNeighbor = $scope.items[index + 1];
+		if(!lowerNeighbor){
+			console.log("Already the lowest item."); return;
+		}
+		var lowerNeighborPriority = lowerNeighbor.priority;
+		newPriority = lowerNeighborPriority + 1;
+	
+		$http({
+			method: "PUT",
+			url: "/api/items/" + id + "/priority/" + newPriority
+		})
+		.then(function(item){
+			$scope.items[index].priority = newPriority;
+			sortItems();
+		})
+	}
+
+
 	//Helper
 	function sortItems(){
 		$scope.items = $scope.items.sort(function(a,b){
