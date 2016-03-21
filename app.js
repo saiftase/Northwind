@@ -21,7 +21,9 @@ app.set('view engine', 'html');
 module.exports = app;
 
 app.get('/', function(req, res, next){
-  res.send("Home Page");
+  res.render("index", {
+    title: "Home Page"
+    });
 });
 
 app.use("/api/items", require("./routes/api/items"));
