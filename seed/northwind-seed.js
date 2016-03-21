@@ -9,10 +9,10 @@ var Item = models.Item;
 
 var data = {
   Item: [
-    {item: "Test Item", priority: 3},
-    {item: "Test Item"},
-    {item: "Test Item", priority: 10}
-  ];
+    {name: "Test Item", priority: 3},
+    {name: "Test Item"},
+    {name: "Test Item", priority: 10}
+  ]
 };
 
 if(!process.env.CONN)

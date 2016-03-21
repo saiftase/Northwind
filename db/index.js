@@ -6,7 +6,7 @@ var itemSchema = mongoose.Schema({
   priority: {type: Number, default: 5}
 });
 
-var Item = mongoose.model('hotel', itemSchema);
+var Item = mongoose.model('item', itemSchema);
 
 var models = {
   Item: Item,
