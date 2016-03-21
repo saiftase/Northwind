@@ -9,9 +9,9 @@ var Item = models.Item;
 
 var data = {
   Item: [
-    {name: "Test Item", priority: 3},
-    {name: "Test Item"},
-    {name: "Test Item", priority: 10}
+    {name: "First Item", priority: 3},
+    {name: "Second Item"},
+    {name: "Third Item", priority: 10}
   ]
 };
 
