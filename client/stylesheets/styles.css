@@ -6,7 +6,7 @@ body {
   color: #24324B;
   background-color: #F05620;
   margin: auto;
-  width: 30%;
+  width: 500px;
   padding: 10px;
   text-align: center;
   border-width: 0px;
@@ -43,3 +43,7 @@ body {
   #main ul {
     text-align: left;
     list-style: none; }
+
+@media screen and (max-width: 500px) {
+  #main {
+    width: 100%; } }

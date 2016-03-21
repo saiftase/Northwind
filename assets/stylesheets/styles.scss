@@ -11,7 +11,7 @@ body{
 	color: $secondary-blue;
 	background-color: $primary-orange;
 	margin: auto;
-	width: 30%;
+	width: 500px;
 	padding: 10px;
 	text-align: center;
 	border-width: 0px;
@@ -64,5 +64,10 @@ body{
 		list-style: none;
 	}
 
+}
 
+@media screen and (max-width: 500px) {
+  #main{
+  	width: 100%;
+  }
 }
