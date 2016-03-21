@@ -5,7 +5,7 @@ Prioritized list of items
 
  Use the following commands in the terminal to setup, test, and run Northwind.
 
- #Setup
+###Setup
 
 Installing Dependencies:
 ```bash
@@ -13,13 +13,13 @@ bower install angular
 npm install
 ```
 
-#Testing
+###Testing
 
 Run Tests:
 ```bash
 npm test
 ```
-#Usage
+###Usage
 
 Seed Database:
 ```bash
