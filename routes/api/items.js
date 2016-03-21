@@ -6,7 +6,7 @@ var Item = models.Item;
 
 //Get all items
 router.get("/", function(req, res, next){
-	Item.find().sort("Priority")
+	Item.find().sort("priority")
 	.then(function(items){
 		res.send(items);
 	});
