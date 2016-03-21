@@ -2,12 +2,14 @@ body {
   background-color: #24324B; }
 
 #main {
+  font-family: sans-serif;
   color: #24324B;
   background-color: #F05620;
   margin: auto;
   width: 30%;
   padding: 10px;
   text-align: center;
+  border-width: 0px;
   border-radius: 5px; }
   #main a {
     text-decoration: none; }

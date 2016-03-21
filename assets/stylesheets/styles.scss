@@ -7,12 +7,14 @@ body{
 }
 
 #main{
+	font-family: sans-serif;
 	color: $secondary-blue;
 	background-color: $primary-orange;
 	margin: auto;
 	width: 30%;
 	padding: 10px;
 	text-align: center;
+	border-width: 0px;
 	border-radius: 5px;
 
 	a{
