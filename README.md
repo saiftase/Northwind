@@ -9,3 +9,12 @@ bower install angular
 npm install
 ```
 
+Run Tests:
+```bash
+npm test
+```
+
+Start Server:
+```bash
+npm start
+```
