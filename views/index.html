@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div ng-app="Northwind">
+	<div id="main"  ng-controller="ListController">
+		<div>
+			<h1>Northwind</h1>
+			<div class="input-group">
+			<form>
+				Item:
+				<input type="text" name="item" placeholder="item" ng-model="new.name">
+				
+				Priority:
+				<input type="text" name="priority" placeholder="5" ng-model="new.priority">
+
+				<input type="submit" value="Submit" ng-click="addItem()">
+			</form>
+
+			<ul ng-repeat="item in items">
+				<li>
+				{% raw %}
+				{{ item.name }} ({{item.priority}})
+				<a class="remove-item-link" href="#" ng-click="removeItem($index)">Remove</a>
+				|
+				<a ng-show="arrowUp(item, $index)" href="#" ng-click="up($index)">Up</a> | 
+				<a ng-show="arrowDown(item, $index)" href="#" ng-click="down($index)">Down</a>
+				{% endraw %}
+				</li>
+			</ul>
+			</div>
+		</div>
+		<script src="../vendor/angular/angular.js"></script>
+		<script src='../client/javascript/app.js'></script>
+	</div>
+</div>
+{% endblock %}

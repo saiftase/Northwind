@@ -85,11 +85,27 @@ app.controller("ListController", function($http, $scope){
 		})
 	}
 
+	$scope.arrowUp = function (item, index){
+		if(index === 0){
+			return false;
+		}else{
+			return true;
+		}
+	}
 
-	//Helper
+	$scope.arrowDown = function (item, index){
+		if(index === $scope.items.length - 1){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	//Helper & Other
 	function sortItems(){
 		$scope.items = $scope.items.sort(function(a,b){
 			return a.priority - b.priority;
 		});
 	}
+
 })
