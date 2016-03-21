@@ -20,9 +20,8 @@
 				<li>
 				{% raw %}
 				{{ item.name }} ({{item.priority}})
-				<a class="remove-item-link" href="#" ng-click="removeItem($index)">Remove</a>
-				|
-				<a ng-show="arrowUp(item, $index)" href="#" ng-click="up($index)">Up</a> | 
+				<a class="remove-item-link" href="#" ng-click="removeItem($index)">Remove</a> 
+				<a ng-show="arrowUp(item, $index)" href="#" ng-click="up($index)">Up</a> 
 				<a ng-show="arrowDown(item, $index)" href="#" ng-click="down($index)">Down</a>
 				{% endraw %}
 				</li>

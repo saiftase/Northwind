@@ -12,7 +12,10 @@ body {
   border-width: 0px;
   border-radius: 5px; }
   #main a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #A2A5A3;
+    padding: 0px 2px;
+    float: right; }
   #main input {
     color: #24324B;
     font-weight: bold;
