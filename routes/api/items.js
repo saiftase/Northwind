@@ -20,8 +20,8 @@ router.post("/", function(req, res, next){
 	})
 	.then(function(item){
 		res.send(item);
-	})
-})
+	});
+});
 
 //Remove a specific item
 router.delete("/:id", function(req, res, next){
@@ -30,8 +30,8 @@ router.delete("/:id", function(req, res, next){
 	})
 	.then(function(days){
 		res.sendStatus(204);
-	})
-})
+	});
+});
 
 //Update priority of a specific item
 router.put("/:id/priority/:priority", function(req, res, next){
@@ -42,7 +42,7 @@ router.put("/:id/priority/:priority", function(req, res, next){
 	})
 	.then(function(item){
 		res.send(item);
-	})
-})
+	});
+});
 
 module.exports = router;

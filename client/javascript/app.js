@@ -13,17 +13,19 @@ app.controller("ListController", function($http, $scope){
 
 	//Functions
 	$scope.addItem = function(){
+    //watch the naming-- not sure I want a variable named new
 		var data = {
 			name: $scope.new.name,
-			priority: $scope.new.priority || 5
-		}
+			priority: $scope.new.priority || 5//you could add default to the database too
+		};
+    
 
 		$http.post('/api/items', data)
 		.then(function(body){
 			var item = body.data;
 			$scope.items.push(item);
 			sortItems();
-			return body.data;
+			return body.data;//what am I returning to?
 		})
 	}
 
@@ -35,10 +37,11 @@ app.controller("ListController", function($http, $scope){
 		})
 		.then(function(){
 			$scope.items.splice(index, 1);
-			return;
-		})
-	}
+			return;//why return to what?
+		});
+	};
 
+  //you could probably DRY up the up and down methods.. no?
 	$scope.up = function(index){
 		var id = $scope.items[index]._id;
 		var newPriority;
@@ -61,8 +64,8 @@ app.controller("ListController", function($http, $scope){
 		.then(function(item){
 			$scope.items[index].priority = newPriority;
 			sortItems();
-		})
-	}
+		});
+	};
 
 	$scope.down = function(index){
 		var id = $scope.items[index]._id;
@@ -82,30 +85,22 @@ app.controller("ListController", function($http, $scope){
 		.then(function(item){
 			$scope.items[index].priority = newPriority;
 			sortItems();
-		})
-	}
+		});
+	};
 
 	$scope.arrowUp = function (item, index){
-		if(index === 0){
-			return false;
-		}else{
-			return true;
-		}
-	}
+    return index !== 0;
+	};
 
 	$scope.arrowDown = function (item, index){
-		if(index === $scope.items.length - 1){
-			return false;
-		}else{
-			return true;
-		}
-	}
+		return index !== $scope.items.length - 1;
+	};
 
 	//Helper & Other
 	function sortItems(){
 		$scope.items = $scope.items.sort(function(a,b){
 			return a.priority - b.priority;
 		});
-	}
+	};
 
-})
+});

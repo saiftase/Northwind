@@ -13,5 +13,6 @@ module.exports = function(){
       return Item.create(item);
     }).then(function(createdItem){
       console.log(createdItem);
-    })
+      return createdItem;//you might want this
+    });
 };
